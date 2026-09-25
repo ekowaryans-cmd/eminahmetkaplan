@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Methodology · Lecture Notes · Emin Ahmet Kaplan</title>
+<meta name="description" content="Weekly study notes, datasets and course documents for Survey Methodology (1108308), Karamanoglu Mehmetbey University, Fall 2026.">
+<meta property="og:title" content="Survey Methodology · Lecture Notes · Emin Ahmet Kaplan">
+<meta property="og:description" content="Weekly study notes, datasets and course documents for Survey Methodology (1108308), Karamanoglu Mehmetbey University, Fall 2026.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.eminahmetkaplan.com/survey-methodology.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script data-goatcounter="https://eak.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="mono">EAK</span><b>Emin Ahmet <span>Kaplan</span></b></a>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="lecture-notes.html" class="active">Lecture Notes</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#8801;</button>
+  </div>
+</header>
+
+<section class="page-intro">
+  <div class="wrap">
+    <a class="back-link" href="lecture-notes.html">&larr; All lecture notes</a>
+    <div class="eyebrow">Lecture Notes &middot; Fall 2026</div>
+    <h1>Survey Methodology</h1>
+    <p id="summary"></p>
+    <dl class="course-facts" id="facts"></dl>
+  </div>
+</section>
+
+<section id="documents-section" style="padding-top:40px;padding-bottom:0" hidden>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">Course Documents</h2><span class="sec-rule"></span></div>
+    <div class="week-files" id="documents"></div>
+  </div>
+</section>
+
+<section style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Weekly Materials</h2><span class="sec-rule"></span></div>
+    <div id="weeks"><p class="week-empty">Loading&hellip;</p></div>
+    <p class="notes-hint">Materials are shared for students enrolled in this course. Please do not redistribute them without permission.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>&copy; 2026 Assoc. Prof. Dr. Emin Ahmet Kaplan</span>
+    <span class="foot-links">
+      <a href="https://orcid.org/0000-0002-4808-8529" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=6zco0csAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=57471753100" target="_blank" rel="noopener">Scopus</a>
+      <a href="mailto:eminahmet@kmu.edu.tr">Email</a>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/lecture-notes-data.js"></script>
+<script src="assets/lecture-notes.js"></script>
+<script>
+(function(){
+  var c = LECTURE_NOTES["survey-methodology"];
+  document.getElementById('summary').textContent = c.summary;
+  document.getElementById('facts').innerHTML = c.facts.map(function(f){
+    return '<div><dt>' + f[0] + '</dt><dd>' + f[1] + '</dd></div>'; }).join('');
+  LectureNotes.renderCourse("survey-methodology");
+})();
+</script>
+</body>
+</html>
