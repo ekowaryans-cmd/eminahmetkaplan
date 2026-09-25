@@ -125,6 +125,7 @@ window.LECTURE_NOTES = {
       { suffix: "Data",  ext: "xlsx", label: "Excel file" },
       { suffix: "Code",  ext: "py",   label: "Python script" }
     ],
+    protectedNote: "Study notes (PDF) are password-protected. The password is announced in class.",
     /* Course-wide documents: shown only after they are uploaded. */
     documents: [
       { file: "SM_Report_Template.docx", label: "Research report template" },
