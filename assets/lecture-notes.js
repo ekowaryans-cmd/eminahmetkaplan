@@ -82,6 +82,20 @@
       })).then(function(rows){ list.innerHTML = rows.join(''); });
     });
 
+    var note = document.getElementById('protected-note');
+    if (note && c.protectedNote){ note.textContent = c.protectedNote; note.hidden = false; }
+
+    var resBox = document.getElementById('resources');
+    if (resBox && c.resources && c.resources.length){
+      resBox.innerHTML = c.resources.map(function(r){
+        return '<a class="resource" href="' + r.url + '" target="_blank" rel="noopener">' +
+          '<span class="resource-title">' + esc(r.title) + '</span>' +
+          '<span class="resource-meta">' + esc(r.authors) + ' &middot; ' + esc(r.note) + '</span>' +
+          '<span class="resource-url">' + esc(r.url.replace(/^https?:\/\//, '').replace(/\/$/, '')) + ' &#8599;</span></a>';
+      }).join('');
+      document.getElementById('resources-section').hidden = false;
+    }
+
     if (docsBox && c.documents && c.documents.length){
       Promise.all(c.documents.map(function(d){
         var url = c.folder + d.file;

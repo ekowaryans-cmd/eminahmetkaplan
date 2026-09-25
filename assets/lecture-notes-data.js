@@ -34,6 +34,18 @@ window.LECTURE_NOTES = {
       { suffix: "Data",  ext: "zip", label: "Data files" }
     ],
     documents: [],
+    protectedNote: "Study notes (PDF) are password-protected. The password is announced in class.",
+    /* Free editions published online by the authors themselves. */
+    resources: [
+      { title: "Feature Engineering and Selection: A Practical Approach for Predictive Models",
+        authors: "Max Kuhn & Kjell Johnson",
+        note: "Free online edition by the authors",
+        url: "https://feat.engineering/" },
+      { title: "Python for Data Analysis (3rd ed.)",
+        authors: "Wes McKinney",
+        note: "Free online edition by the author",
+        url: "https://wesmckinney.com/book/" }
+    ],
     weeks: [
       { week: 1, date: "28 September 2026",
         title: "From business problem to analytical table",
