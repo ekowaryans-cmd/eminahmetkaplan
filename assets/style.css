@@ -201,6 +201,17 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
   border-radius:6px;padding:7px 14px 7px 8px;font-size:.84rem;color:var(--ink);transition:all .2s}
 .file-chip:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 18px -12px rgba(22,38,63,.4)}
 .file-ext{font-size:.64rem;letter-spacing:.06em;font-weight:600;background:var(--ink);color:var(--paper);border-radius:3px;padding:3px 6px}
+.assignment{margin-top:18px;padding:16px 18px;background:#f4ecda;border:1px solid #e2d3b0;border-left:4px solid var(--accent-deep);border-radius:6px}
+.assignment-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:6px}
+.assignment-tag{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;background:var(--accent-deep);color:var(--paper);border-radius:3px;padding:4px 8px}
+.assignment-due{font-size:.88rem;font-weight:600;color:var(--ink)}
+.week-body p.assignment-title{font-size:.98rem;color:var(--ink);font-weight:500}
+.week-body p.assignment-note{font-size:.84rem;color:var(--muted);margin-top:2px}
+.assignment .week-files{margin-top:12px}
+.assignment-banner{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 22px;padding:14px 18px;background:#f4ecda;border:1px solid #e2d3b0;border-left:4px solid var(--accent-deep);border-radius:6px;font-size:.92rem;color:var(--ink)}
+.assignment-banner a{color:var(--accent-deep);font-weight:600;text-decoration:none;margin-left:auto}
+.assignment-banner a:hover{text-decoration:underline}
+.week{scroll-margin-top:90px}
 .week-empty{color:var(--muted);font-size:.95rem;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 @media(max-width:780px){.week{grid-template-columns:1fr;gap:8px}.week-when b{display:inline;margin-right:10px}}
 .protected-note{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--accent-deep);

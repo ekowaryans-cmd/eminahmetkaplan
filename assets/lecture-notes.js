@@ -48,9 +48,28 @@
   }
 
   /* ---------- course page ---------- */
-  function chip(href, label, ext){
-    return '<a class="file-chip" href="' + href + '" target="_blank" rel="noopener">' +
+  function chip(href, label, ext, download){
+    var dl = download ? ' download="' + esc(download) + '"' : ' target="_blank" rel="noopener"';
+    return '<a class="file-chip" href="' + href + '"' + dl + '>' +
       '<span class="file-ext">' + ext.toUpperCase() + '</span>' + esc(label) + '</a>';
+  }
+
+  /* Assignment block inside a week; shown only when its first file is online */
+  function assignmentBlock(c, w){
+    var a = w.assignment;
+    if (!a || !a.files || !a.files.length) return Promise.resolve('');
+    return Promise.all(a.files.map(function(f){
+      var url = c.folder + f.file;
+      return exists(url).then(function(ok){ return ok ? chip(url, f.label, f.ext, f.download) : ''; });
+    })).then(function(chips){
+      if (!chips[0]) return '';
+      return '<div class="assignment">' +
+        '<div class="assignment-head"><span class="assignment-tag">' + esc(a.label) + '</span>' +
+        '<span class="assignment-due">Due ' + esc(a.due) + '</span></div>' +
+        '<p class="assignment-title">' + esc(a.title) + '</p>' +
+        (a.note ? '<p class="assignment-note">' + esc(a.note) + '</p>' : '') +
+        '<div class="week-files">' + chips.join('') + '</div></div>';
+    });
   }
 
   function renderCourse(key){
@@ -72,14 +91,35 @@
             return ok ? chip(url, f.label, f.ext) : '';
           });
         })).then(function(chips){
-          return '<article class="week">' +
+          return assignmentBlock(c, w).then(function(asg){ return [chips, asg]; });
+        }).then(function(res){
+          var chips = res[0], asg = res[1];
+          return '<article class="week" id="week-' + pad(w.week) + '">' +
             '<div class="week-when"><b>Week ' + pad(w.week) + '</b><span>' + esc(w.date) + '</span></div>' +
             '<div class="week-body"><h3>' + esc(w.title) + '</h3>' +
             '<p>' + esc(w.detail) + '</p>' +
             (w.reading ? '<p class="week-reading"><span>Reading</span>' + esc(w.reading) + '</p>' : '') +
-            '<div class="week-files">' + chips.join('') + '</div></div></article>';
+            '<div class="week-files">' + chips.join('') + '</div>' + asg + '</div></article>';
         });
-      })).then(function(rows){ list.innerHTML = rows.join(''); });
+      })).then(function(rows){
+        list.innerHTML = rows.join('');
+        /* banner for assignments that are online and not yet due */
+        var now = new Date();
+        var open = ws.filter(function(w){
+          return w.assignment && w.assignment.dueISO && now <= new Date(w.assignment.dueISO) &&
+                 list.querySelector('#week-' + pad(w.week) + ' .assignment');
+        });
+        if (open.length){
+          var b = document.createElement('div');
+          b.className = 'assignment-banner';
+          b.innerHTML = open.map(function(w){
+            return '<span class="assignment-tag">' + esc(w.assignment.label) + '</span>' +
+              '<span>is open &middot; due ' + esc(w.assignment.due) + '</span>' +
+              '<a href="#week-' + pad(w.week) + '">Go to Week ' + pad(w.week) + ' &rarr;</a>';
+          }).join('<br>');
+          list.parentNode.insertBefore(b, list);
+        }
+      });
     });
 
     var note = document.getElementById('protected-note');

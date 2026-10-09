@@ -58,7 +58,18 @@ window.LECTURE_NOTES = {
       { week: 3, date: "12 October 2026",
         title: "The data quality report",
         detail: "Missing rate; cardinality; central tendency and dispersion; quartiles and IQR; Tukey outlier fences and box plots; hidden missing codes; standard error of a proportion.",
-        reading: "KMD 3.1-3.4; FES 4; McKinney 5.3" },
+        reading: "KMD 3.1-3.4; FES 4; McKinney 5.3",
+        assignment: {
+          label: "Assignment 1",
+          title: "Data quality report and analytical base table draft",
+          due: "26 October 2026, start of class",
+          dueISO: "2026-10-26T23:59:59+03:00",
+          note: "Instructions, submission rules and grading criteria are in the assignment PDF.",
+          files: [
+            { file: "DA_Assignment01.pdf", label: "Assignment 1", ext: "pdf" },
+            { file: "DA_Assignment01_Data.csv", label: "Assignment data", ext: "csv", download: "odev1_veri.csv" }
+          ]
+        } },
       { week: 4, date: "19 October 2026",
         title: "Process and leakage",
         detail: "Train-test split; k-fold cross-validation; random, subject-based and time-based splitting; two types of leakage; class imbalance and the base rate.",
