@@ -73,7 +73,7 @@ window.LECTURE_NOTES = {
       { week: 4, date: "19 October 2026",
         title: "Process and leakage",
         detail: "Train-test split; k-fold cross-validation; random, subject-based and time-based splitting; two types of leakage; class imbalance and the base rate.",
-        reading: "KMD 9.3, 9.4.1; PF Ch. 5" },
+        reading: "KMD 9.3, 9.4.1; PF Ch. 5; FES 3.3, 3.4, 3.8, 9.2" },
       { week: 5, date: "26 October 2026",
         title: "Missing data",
         detail: "Missingness mechanisms; complete-case analysis; mean and median imputation; the effect of imputation on variance (algebraic derivation); missingness indicator; structural missingness.",
