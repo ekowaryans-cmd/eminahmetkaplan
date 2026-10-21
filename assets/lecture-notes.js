@@ -26,7 +26,7 @@
     var n = 1;
     Object.keys(DATA).forEach(function(key){
       var c = DATA[key];
-      var meta = [c.term, c.schedule, 'Code ' + c.code].join(' &middot; ');
+      var meta = [c.term, c.schedule, c.code ? 'Code ' + c.code : ''].filter(Boolean).map(esc).join(' &middot; ');
       var a = document.createElement('a');
       a.className = 'course-card';
       a.href = c.page;

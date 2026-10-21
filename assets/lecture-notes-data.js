@@ -185,6 +185,31 @@ window.LECTURE_NOTES = {
         title: "Presentation of findings",
         detail: "Presenting research findings and overall evaluation." }
     ]
+    },
+
+  "academic-writing": {
+    title: "Academic Writing Workshop",
+    term: "Fall 2026",
+    schedule: "Four weekly online sessions",
+    facts: [
+      ["Format", "Online workshop · four weekly sessions of about 90 minutes"],
+      ["Language", "Turkish"],
+      ["Level", "Undergraduate, introductory"],
+      ["Citation style", "APA 7"]
+    ],
+    summary: "An introductory workshop on academic writing in Turkish: reading as preparation for writing, the question-claim-evidence structure of academic texts, quotation and paraphrase in APA 7, academic integrity and the responsible use of AI, and the stages of drafting, feedback and revision.",
+    page: "academic-writing.html",
+    folder: "notes/academic-writing/",
+    prefix: "AW",
+    files: [
+      { suffix: "Notes", ext: "pdf", label: "Ders notu" }
+    ],
+    documents: [],
+    weeks: [
+      { week: 1, date: "21 October 2026",
+        title: "1. Hafta Notu",
+        detail: "Tanışalım: Akademik yazı bir sohbettir. Soru, iddia ve kanıt; akademik makalenin anatomisi; kavram kartı; alıntı ve parafraz (APA 7); akademik dürüstlük ve yapay zekâ; gündelik dilden akademik dile; yazma sürecinin haritası." }
+    ]
   }
 
 };
