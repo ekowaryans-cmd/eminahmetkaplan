@@ -77,7 +77,18 @@ window.LECTURE_NOTES = {
       { week: 5, date: "26 October 2026",
         title: "Missing data",
         detail: "Missingness mechanisms; complete-case analysis; mean and median imputation; the effect of imputation on variance (algebraic derivation); missingness indicator; structural missingness.",
-        reading: "KMD 3.4.1; FES 8" },
+        reading: "KMD 3.4.1; FES 8",
+        assignment: {
+          label: "Assignment 2",
+          title: "Splitting, missing data and numerical transformations",
+          due: "9 November 2026, start of class",
+          dueISO: "2026-11-09T09:30:00+03:00",
+          note: "Instructions, submission rules and grading criteria are in the assignment PDF.",
+          files: [
+            { file: "DA_Assignment02.pdf", label: "Assignment 2", ext: "pdf" },
+            { file: "DA_Assignment02_Data.csv", label: "Assignment data", ext: "csv", download: "odev2_veri.csv" }
+          ]
+        } },
       { week: 6, date: "2 November 2026",
         title: "Numerical transformations",
         detail: "Min-max scaling; z-score standardisation; clipping; the Box-Cox family and the log transformation; Euclidean distance and the effect of scale on distance.",

@@ -65,7 +65,10 @@
       if (!chips[0]) return '';
       return '<div class="assignment">' +
         '<div class="assignment-head"><span class="assignment-tag">' + esc(a.label) + '</span>' +
-        '<span class="assignment-due">Due ' + esc(a.due) + '</span></div>' +
+        '<span class="assignment-due">Due ' + esc(a.due) + '</span>' +
+        (a.dueISO && new Date() > new Date(a.dueISO)
+          ? '<span class="assignment-closed">Deadline passed &middot; submissions are closed</span>' : '') +
+        '</div>' +
         '<p class="assignment-title">' + esc(a.title) + '</p>' +
         (a.note ? '<p class="assignment-note">' + esc(a.note) + '</p>' : '') +
         '<div class="week-files">' + chips.join('') + '</div></div>';
