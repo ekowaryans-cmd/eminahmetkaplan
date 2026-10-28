@@ -219,7 +219,10 @@ window.LECTURE_NOTES = {
     weeks: [
       { week: 1, date: "21 October 2026",
         title: "1. Hafta Notu",
-        detail: "Tanışalım: Akademik yazı bir sohbettir. Soru, iddia ve kanıt; akademik makalenin anatomisi; kavram kartı; alıntı ve parafraz (APA 7); akademik dürüstlük ve yapay zekâ; gündelik dilden akademik dile; yazma sürecinin haritası." }
+        detail: "Tanışalım: Akademik yazı bir sohbettir. Soru, iddia ve kanıt; akademik makalenin anatomisi; kavram kartı; alıntı ve parafraz (APA 7); akademik dürüstlük ve yapay zekâ; gündelik dilden akademik dile; yazma sürecinin haritası." },
+      { week: 2, date: "28 October 2026",
+        title: "2. Hafta Notu",
+        detail: "Bir iddia kurmak: Konudan soruya, sorudan iddiaya; iyi bir iddianın dört özelliği; üç katlı iddia; çalışma iddiası; karşı görüşü hesaba katmak; dört adımlı paragraf iskeleti; giriş, sonuç ve geçiş sözcükleri; APA 7 ile metin içinde kaynak gösterme ve kaynakça; denemenin konusu ve planı." }
     ]
   }
 

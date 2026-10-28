@@ -3,5 +3,6 @@
 Upload each week's notes into this folder with exactly this name (two-digit week number):
 
 - `AW_Week01_Notes.pdf`: study notes (the week appears on the website once this file is here)
+- `AW_Week02_Notes.pdf`: week 2 study notes
 
 Notes for this workshop are posted without a password.
