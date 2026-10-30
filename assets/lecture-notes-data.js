@@ -92,7 +92,7 @@ window.LECTURE_NOTES = {
       { week: 6, date: "2 November 2026",
         title: "Numerical transformations",
         detail: "Min-max scaling; z-score standardisation; clipping; the Box-Cox family and the log transformation; Euclidean distance and the effect of scale on distance.",
-        reading: "KMD 3.6.1; FES 6" },
+        reading: "KMD 3.6.1, 3.4.2, 5.4.3, 5.5; FES 6, 6.1; APM 3.2-3.3; McKinney 7.2" },
       { week: 7, date: "9 November 2026",
         title: "Review and problem solving",
         detail: "Rule card; formula card; twelve solved problems on an end-to-end workflow; midterm question pool.",
