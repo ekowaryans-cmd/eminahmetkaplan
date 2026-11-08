@@ -95,7 +95,7 @@ window.LECTURE_NOTES = {
         reading: "KMD 3.6.1, 3.4.2, 5.4.3, 5.5; FES 6, 6.1; APM 3.2-3.3; McKinney 7.2" },
       { week: 7, date: "9 November 2026",
         title: "Review and problem solving",
-        detail: "Rule card; formula card; twelve solved problems on an end-to-end workflow; midterm question pool.",
+        detail: "Thirteen questions on one shared table covering Weeks 1-6 (calculation, choice, fault-finding and code reading), each with the formula given and a short concept reminder; formula card; midterm rehearsal.",
         reading: "Notes for Weeks 1-6" },
       { week: 9, date: "23 November 2026",
         title: "Categorical variables",
