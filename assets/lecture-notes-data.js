@@ -222,7 +222,10 @@ window.LECTURE_NOTES = {
         detail: "Tanışalım: Akademik yazı bir sohbettir. Soru, iddia ve kanıt; akademik makalenin anatomisi; kavram kartı; alıntı ve parafraz (APA 7); akademik dürüstlük ve yapay zekâ; gündelik dilden akademik dile; yazma sürecinin haritası." },
       { week: 2, date: "28 October 2026",
         title: "2. Hafta Notu",
-        detail: "Bir iddia kurmak: Konudan soruya, sorudan iddiaya; iyi bir iddianın dört özelliği; üç katlı iddia; çalışma iddiası; karşı görüşü hesaba katmak; dört adımlı paragraf iskeleti; giriş, sonuç ve geçiş sözcükleri; APA 7 ile metin içinde kaynak gösterme ve kaynakça; denemenin konusu ve planı." }
+        detail: "Bir iddia kurmak: Konudan soruya, sorudan iddiaya; iyi bir iddianın dört özelliği; üç katlı iddia; çalışma iddiası; karşı görüşü hesaba katmak; dört adımlı paragraf iskeleti; giriş, sonuç ve geçiş sözcükleri; APA 7 ile metin içinde kaynak gösterme ve kaynakça; denemenin konusu ve planı." },
+      { week: 3, date: "11 November 2026",
+        title: "3. Hafta Notu",
+        detail: "Okuyucunun gözüyle: Yazar kendi metnini neden göremez; geri bildirimin dört katmanı; iyi geri bildirim vermek ve almak; tersine taslak; birincil ve ikincil kaynak; kaynakların dört basamağı; dipnotun peşinden gitmek ve nerede aranır; kaynağa güven ve kaynak kontrol listesi; APA 7 ile ikinci elden atıf." }
     ]
   }
 
